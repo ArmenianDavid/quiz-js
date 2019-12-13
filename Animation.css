@@ -1,0 +1,67 @@
+body{
+  margin:0;
+  min-width: 320px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+h1{
+  text-transform: lowercase;
+  margin: 2px;
+}
+h1 div{
+  width: 35px;
+  text-align: center;
+  padding: 5px;
+  margin-left: 3px;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+}
+.container{
+  width: 100%;
+  text-align: center;
+}
+.color1{
+  background-color: #00cc66;
+  animation-name: comeFromLeft;
+  animation-duration: 2s;
+}
+.color2{
+  background-color: #ff33ff;
+  animation-name: comeFromLeft;
+  animation-delay: 0.1s;
+  animation-duration: 2.1s;
+}
+.color3{
+  background-color: 	#66616b;
+  animation-name: comeFromLeft;
+  animation-delay: 0.2s;
+  animation-duration: 2.2s;
+}
+.color4{
+  background-color: #ffcc33;
+  animation-name: comeFromLeft;
+  animation-delay: 0.3s;
+  animation-duration: 2.3s;
+}
+.color5{
+  background-color: #33adff;
+  animation-name: comeFromLeft;
+  animation-delay: 0.4s;
+  animation-duration: 2.4s;
+}
+.color6{
+  background-color: #ff6600;
+  animation-name: comeFromLeft;
+  animation-delay: 0.5s;
+  animation-duration: 2.5s;
+}
+
+
+@keyframes comeFromLeft{
+  0%{right : -500px;}
+  100%{right: 0px;}
+}
+
+/* Media */

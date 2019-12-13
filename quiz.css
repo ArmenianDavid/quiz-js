@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+body{
+    max-width: 1300px ;
+    min-width: 320px;
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+    font-weight: 300;
+    text-align: center;
+    background-color: #f8f6f0;
+    overflow: hidden;
+}
+
+/*Space*/
+.question-container .space{
+  padding-left: 0.7em;
+  font-size: 1em;
+}
+.question-container .space2{
+  padding-left: 1.4em;
+  font-size: 1em;
+}
+/* Space end */
+h1{
+  font-weight: 800;
+  margin: 0px;
+  padding: 10px;
+  font-size: 2em;
+  background-color: #444;
+  color: #fff;
+}
+.question-container{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: left;
+  font-size: 1.5em;
+}
+.question{
+  font-size: 1em;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.answers {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20%;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+button{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+button:hover{
+    background-color: #38a;
+}
+
+.waitMe{
+  position: relative;
+  top: -55px;
+  left: 100px;
+  display: none;
+  animation-name: come-from-left-text;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+}
+
+#button-container{
+  position: relative;
+  top: 40px;
+  z-index: 3;
+}
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s;
+  padding: 1em 1em 0em 1em;
+}
+.active-slide{
+  position: relative;
+  margin: auto;
+  width: 80%;
+  opacity: 1;
+  z-index: 2;
+  animation-name: comeFromRight;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+.sub-class{
+  font-weight: 400;
+  padding: 10px;
+  font-size: 0.6em;
+  background-color: #444;
+  color: #fff;
+}
+
+@media only screen and (max-width:500px){
+   body{
+    font-size: 15px;
+  } 
+}
+@media only screen and (max-width:400px){
+  body{
+   font-size: 14px;
+ } 
+}
+@media only screen and (max-width:380px){
+  body{
+   font-size: 13px;
+ } 
+}
+
+/* ANIMATION  */
+.color-change1{
+  position: relative;
+  animation-timing-function: ease;
+  animation-name: apearance;
+  animation-duration: 1s;
+}
+.color-change2{
+  position: relative;
+  animation-timing-function: ease;
+  animation-name: apearance;
+  animation-duration: 1s;
+
+}
+.color-change3{
+  position: relative;
+  animation-timing-function: ease;
+  animation-name: apearance;
+  animation-duration: 1s;
+}
+@keyframes apearance{
+  0%{opacity: 0; top: -50px;}
+  20%{opacity: 0.2;}
+  40%{opacity: 0.4;}
+  60%{opacity: 0.6;}
+  80%{opacity: 0.8;}
+  100%{opacity: 1; top: 0px;}
+}
+@keyframes comeFromRight{
+  0%{left: 1000px;}
+  50%{left: 500px; top: 300px;}
+  100%{left: 0;}
+}
+
+#button-container{
+   animation-name: come-from-left;
+   animation-duration: 1.5s;
+   animation-timing-function: ease;
+}
+@keyframes come-from-left{
+  0%{right: 600px; transform:rotate(180deg)}
+  100%{right:0px; top: 40px; transform:rotate(360deg)}
+}
